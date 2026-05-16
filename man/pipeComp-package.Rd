@@ -12,6 +12,14 @@ to benchmark single-cell RNA sequencing pipelines, and contains pre-defined
 \code{\link{PipelineDefinition}}s and functions to that effect, but could be
 applied to any context. See `vignette("pipeComp")` for an introduction.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \doi{10.1186/s13059-020-02136-7}
+  \item Report bugs at \url{https://github.com/plger/pipeComp}
+}
+
+}
 \author{
 Pierre-Luc Germain \email{pierre-luc.germain@hest.ethz.ch}
 

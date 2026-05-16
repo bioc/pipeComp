@@ -10,7 +10,7 @@
 #'
 #' @return A numeric vector of metrics (see the `pipeComp_scRNA` vignette for 
 #' details)
-#' @importFrom aricode clustComp
+#' @importFrom aricode compare_clustering
 #' @export
 #' 
 #' @examples
@@ -45,7 +45,7 @@ evaluateClustering <- function(x, tl=NULL){
   x <- as.character(x)
   unmatched <- length(x)-sum(e$n_cells_matched)
   c( unlist(e), unmatched.cells=unmatched, 
-     unlist(aricode::clustComp(x,tl)) )
+     unlist(aricode::compare_clustering(x,tl)) )
 }
 
 .compileExcludedCells <- function(before, after){

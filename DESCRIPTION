@@ -1,7 +1,7 @@
 Package: pipeComp
 Type: Package
 Title: pipeComp pipeline benchmarking framework
-Version: 1.23.0
+Version: 1.23.1
 Depends: R (>= 4.1)
 Authors@R: c(
 	person("Pierre-Luc", "Germain", email="pierre-luc.germain@hest.ethz.ch", role=c("cre","aut"), comment = c(ORCID = "0000-0003-3418-4218")), 
@@ -19,8 +19,8 @@ Imports: BiocParallel, S4Vectors, ComplexHeatmap, SingleCellExperiment, Summariz
 Suggests: BiocStyle, rmarkdown
 License: GPL
 Encoding: UTF-8
-RoxygenNote: 7.1.1
 VignetteBuilder: knitr
 URL: https://doi.org/10.1186/s13059-020-02136-7
 BugReports: https://github.com/plger/pipeComp
 biocViews: GeneExpression, Transcriptomics, Clustering, DataRepresentation
+Config/roxygen2/version: 8.0.0
