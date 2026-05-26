@@ -150,17 +150,18 @@ evaluateClustering <- function(x, tl=NULL){
 #' @importFrom cluster silhouette
 #' @export
 #' @examples
-#' # random data
+#' # This is an old example, it is not run because those old scRNAseq analysis
+#' # functions from scater have been deprecated in favor of scrapper
 #' library(scater)
-#' sce <- runPCA(logNormCounts(mockSCE(ngenes = 500)))
-#' sce <- addPerCellQC(sce)
-#' # random population labels
-#' sce$cluster <- sample(LETTERS[1:3], ncol(sce), replace=TRUE)
-#' res <- evaluateDimRed(sce, sce$cluster, covars=c("sum","detected"))
-#' # average silhouette widths:
-#' res$clust.avg.silwidth
-#' # adjusted R2 of covariates:
-#' res$covar.adjR2
+#' # sce <- runPCA(logNormCounts(mockSCE(ngenes = 500)))
+#' # sce <- addPerCellQC(sce)
+#' # # random population labels
+#' # sce$cluster <- sample(LETTERS[1:3], ncol(sce), replace=TRUE)
+#' # res <- evaluateDimRed(sce, sce$cluster, covars=c("sum","detected"))
+#' # # average silhouette widths:
+#' # res$clust.avg.silwidth
+#' # # adjusted R2 of covariates:
+#' # res$covar.adjR2
 evaluateDimRed <- function(x, clusters=NULL, n=c(10,20,50), covars){
   if(missing(covars)) covars <- c("log10_total_features", "log10_total_counts", 
                                   "total_features")
@@ -531,13 +532,14 @@ match_evaluate_multiple <- function(clus_algorithm, clus_truth=NULL){
 #' @importFrom Matrix rowMeans
 #' @importFrom Seurat GetAssayData
 #' @examples
-#' # random data
+#' # This is an old example, it is not run because those old scRNAseq analysis
+#' # functions from scater have been deprecated in favor of scrapper
 #' library(scater)
-#' sce <- logNormCounts(mockSCE(ngenes = 500))
-#' sce <- addPerCellQC(sce)
-#' # random population labels
-#' sce$cluster <- sample(LETTERS[1:3], ncol(sce), replace=TRUE)
-#' evaluateNorm(sce, sce$cluster, covars="detected")
+#' # sce <- logNormCounts(mockSCE(ngenes = 500))
+#' # sce <- addPerCellQC(sce)
+#' # # random population labels
+#' # sce$cluster <- sample(LETTERS[1:3], ncol(sce), replace=TRUE)
+#' # evaluateNorm(sce, sce$cluster, covars="detected")
 evaluateNorm <- function(x, clusters=NULL, covars){
   if(missing(covars)) covars <- c("log10_total_counts", "total_features")
   if(is(x,"Seurat")){

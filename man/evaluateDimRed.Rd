@@ -35,15 +35,16 @@ If using `evaluteDimRed` in a custom pipeline, you will probably want to use
 `pipeComp:::.aggregateDR` as the corresponding aggregation function.
 }
 \examples{
-# random data
+# This is an old example, it is not run because those old scRNAseq analysis
+# functions from scater have been deprecated in favor of scrapper
 library(scater)
-sce <- runPCA(logNormCounts(mockSCE(ngenes = 500)))
-sce <- addPerCellQC(sce)
-# random population labels
-sce$cluster <- sample(LETTERS[1:3], ncol(sce), replace=TRUE)
-res <- evaluateDimRed(sce, sce$cluster, covars=c("sum","detected"))
-# average silhouette widths:
-res$clust.avg.silwidth
-# adjusted R2 of covariates:
-res$covar.adjR2
+# sce <- runPCA(logNormCounts(mockSCE(ngenes = 500)))
+# sce <- addPerCellQC(sce)
+# # random population labels
+# sce$cluster <- sample(LETTERS[1:3], ncol(sce), replace=TRUE)
+# res <- evaluateDimRed(sce, sce$cluster, covars=c("sum","detected"))
+# # average silhouette widths:
+# res$clust.avg.silwidth
+# # adjusted R2 of covariates:
+# res$covar.adjR2
 }

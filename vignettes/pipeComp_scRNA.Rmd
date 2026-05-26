@@ -34,6 +34,8 @@ _pipeComp, a general framework for the evaluation of computational pipelines, re
 Pierre-Luc Germain, Anthony Sonrel & Mark D Robinson, 
 bioRxiv [2020.02.02.930578](https://doi.org/10.1101/2020.02.02.930578)
 
+**Important note:** Some of the functions from other packages used in the pipeline have been deprecated, and will not be updated here. Thus the examples shown here should be considered as illustrations of `r Rpackage("pipeComp")`'s usage, rather than be used directly.
+
 <br/><br/>
 
 ## The PipelineDefinition
@@ -56,6 +58,8 @@ source(system.file("extdata", "scrna_alternatives.R", package="pipeComp"))
 ```
 
 (To know which packages are required by the set of wrappers you intend to use, see `?checkPipelinePackages`)
+
+**Important note:** Some of the functions from other packages that are used in these alternative steps have been deprecated, and will not be updated here. These are provided as illustrations, and should not be used directly in your workflow without double-checking or updating them.
 
 Any function that has been loaded in the environment can then be used as alternative. We define a small set of alternatives to test:
 
