@@ -11,7 +11,6 @@
 #' @author Mark D. Robinson \email{mark.robinson@@imls.uzh.ch}
 #' @name pipeComp-package
 #' @aliases pipeComp
-#' @docType package
 NULL
 
 

@@ -72,7 +72,7 @@ parsePipNames <- function(x, setRowNames=FALSE, addcolumns=NULL){
   y <- vapply(strsplit(unlist(x2),"="),FUN=function(x) x[2], character(1))
   y <- as.data.frame(matrix(y, ncol=length(n), byrow=TRUE))
   colnames(y) <- n
-  for(i in seq_len(ncol(y))) y[[i]] <- type.convert(y[[i]])
+  for(i in seq_len(ncol(y))) y[[i]] <- type.convert(y[[i]], as.is=FALSE)
   if(setRowNames) row.names(y) <- x
   if(!is.null(addcolumns)){
     row.names(addcolumns) <- NULL
