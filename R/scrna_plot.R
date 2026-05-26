@@ -278,7 +278,7 @@ scrna_describeDatasets <- function(sces, pt.size=0.3, ...){
     x[,c("total_counts","total_features","cluster")]))
   )
   d$dataset <- rep(names(cd), vapply(cd, nrow, integer(1)))
-  pf <- function(d, x) ggplot(d, aes_string(x="cluster", y=x, fill="cluster"))+ 
+  pf <- function(d, x) ggplot(d, aes(x=cluster, y=.data[[x]], fill=cluster))+ 
     geom_violin() + xlab("") + coord_flip() + noy + cs +
     facet_wrap(~dataset, scales="free_y", ncol=1) + 
     theme( strip.text.x = element_blank(), 
