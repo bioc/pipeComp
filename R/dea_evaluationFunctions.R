@@ -85,7 +85,8 @@ dea_evalPlot_curve <- function(res, scales="free", agg.by=NULL, agg.fn=mean,
     d$filter <- paste(d$filt, "(",d$minCount,")")
     d$filter[which(d$filt=="none")] <- "none"
   } 
-  p <- ggplot(d, aes(FDR, TPR, group=method, colour=.data[[colourBy]], shape=.data[[shapeBy]]) +
+  p <- ggplot(d, aes(FDR, TPR, group=method, colour=.data[[colourBy]],
+                     shape=.data[[shapeBy]])) +
     geom_vline(xintercept=unique(d$threshold), linetype="dashed", 
                colour="darkgrey") + 
     geom_line(linewidth=1) + geom_point(size=pointsize)
